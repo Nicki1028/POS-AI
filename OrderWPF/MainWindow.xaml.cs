@@ -1,5 +1,11 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using OrderWPF.Models;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Configuration;
+using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +18,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Xceed.Wpf.Toolkit;
+using Xceed.Wpf.Toolkit.PropertyGrid.Attributes;
+using static OrderWPF.AItool.AIRequestModel;
 
 namespace OrderWPF
 {
@@ -22,7 +31,9 @@ namespace OrderWPF
     {
         public MainWindow()
         {
-            InitializeComponent();
+            InitializeComponent();                
+            DataContext = new MainWindowViewModel();
         }
+
     }
 }
